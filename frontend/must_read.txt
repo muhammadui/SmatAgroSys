@@ -1,0 +1,15 @@
+Dear Team Members,
+
+I hope this note finds you well.
+I wanted to remind everyone that when making changes to our codebase, it's important to avoid pushing directly to the main branch.
+This helps to keep our code organized and reduces the risk of conflicts and unexpected changes.
+
+Instead, please create a separate branch for your work and merge it into the main branch when you are ready to deploy. This allows for easier review and collaboration with the rest of the team.
+
+For those who would like to deploy their changes without pushing, you can use the Firebase CLI by opening the terminal and running the command `firebase deploy`.
+This will deploy your code to the Firebase hosting platform and allow the team to view your changes live in the browser.
+
+Thank you for your cooperation and let's continue to work together to build a great product.
+
+Best regards,
+Muhammad UI.
