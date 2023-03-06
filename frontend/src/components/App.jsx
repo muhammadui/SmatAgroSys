@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Home from "../views/home/Home";
 
-// Style
+// Global Style
 import "../index.css";
 
 const App = () => {
