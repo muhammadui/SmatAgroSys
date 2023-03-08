@@ -1,16 +1,21 @@
 import * as React from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+// Pages
 import Home from "../views/home/Home";
 import Login from "../views/auth/login/Login";
 import Register from "../views/auth/register/Register";
 
 // Global Style
 import "../index.css";
+import "react-toastify/dist/ReactToastify.css";
 
 const App = () => {
 
   return (
     <BrowserRouter>
+      <ToastContainer />
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/auth/login" element={<Login />} />
