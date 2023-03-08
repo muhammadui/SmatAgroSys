@@ -1,13 +1,15 @@
-import React from "react";
+import * as React from "react";
 
 // Style
-import "./Home.css";
+import "./Loader.css";
 
-const Home = () => {
+interface ParamProps { message?: string; }
+
+const Loader = ({ message }: ParamProps ) => {
 
     return (
-        <div className="home_section">
-            <div className="animation_container">
+        <div className="loader_section">
+            <div className="animation_wrapper">
                 <div className="circle">
                     <svg width="1294" height="1294" viewBox="0 0 1294 1294" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1293.74 0H0V1293.74H1293.74V0Z" fill="#0C7E46"/>
@@ -15,10 +17,10 @@ const Home = () => {
                         <path d="M857.24 324H433.32C427.659 324 422.053 325.115 416.823 327.281C411.592 329.448 406.84 332.623 402.837 336.626C398.833 340.63 395.658 345.382 393.492 350.613C391.325 355.843 390.21 361.449 390.21 367.11V453.54C401.597 458.807 412.5 464.383 422.92 470.27V367.11C422.92 364.351 424.015 361.704 425.965 359.752C427.916 357.8 430.561 356.703 433.32 356.7H857.24C859.998 356.705 862.642 357.804 864.592 359.755C866.541 361.707 867.637 364.352 867.64 367.11V927.76C867.637 930.518 866.541 933.163 864.592 935.115C862.642 937.066 859.998 938.165 857.24 938.17H637.92V970.87H857.24C868.672 970.867 879.634 966.324 887.717 958.24C895.799 950.155 900.34 939.192 900.34 927.76V367.11C900.34 355.678 895.799 344.715 887.717 336.63C879.634 328.546 868.672 324.003 857.24 324Z" fill="white"/>
                     </svg>
                 </div>
-                <div className="mt">Loading...</div>
+                <div className="mt">{message ? message : "Loading..."}</div>
             </div>
         </div>
     )
 }
 
-export default Home;
+export default Loader;

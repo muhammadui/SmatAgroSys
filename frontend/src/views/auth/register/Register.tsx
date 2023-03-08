@@ -1,12 +1,11 @@
 import React from "react";
+import Loader from "../../../components/loader/Loader";
 
 const Register = () => {
 
     return (
         <div className="register_section">
-            <div className="container">
-                <p>Register</p>
-            </div>
+            <Loader message="Processing Register..." />
         </div>
     )
 }
