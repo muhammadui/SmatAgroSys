@@ -5,6 +5,7 @@ import { ToastContainer } from "react-toastify";
 import Home from "../views/home/Home";
 import Login from "../views/auth/login/Login";
 import Register from "../views/auth/register/Register";
+import OTP from "./otp/OTP";
 
 // Global Style
 import "../index.css";
@@ -20,6 +21,9 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/auth/login" element={<Login />} />
         <Route path="/auth/register" element={<Register />} />
+
+        {/* <Route path="/otp" element={<OTP />} /> */}
+
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </BrowserRouter>
