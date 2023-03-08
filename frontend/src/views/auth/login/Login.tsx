@@ -98,7 +98,7 @@ const Login = () => {
                             <input type="submit" value="Submit" className="login_btn" />
                         </div>
 
-                        <div className="google_signin_wrapper" onClick={handleGoogleLogin}>
+                        <div className="google_sign_in_out_wrapper" onClick={handleGoogleLogin}>
                             <span className="icon mr">
                                 <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path fillRule="evenodd" clipRule="evenodd" d="M22.54 11.7615C22.54 10.946 22.4668 10.1619 22.3309 9.40918H11.5V13.8576H17.6891C17.4225 15.2951 16.6123 16.513 15.3943 17.3285V20.214H19.1109C21.2855 18.2119 22.54 15.2637 22.54 11.7615Z" fill="#4285F4"/>
@@ -112,9 +112,8 @@ const Login = () => {
                         
                         <div className="text_center mt">
                             <span className="mr">Didn't have an account yet?</span>
-                            <Link className="span_btn text_primary mt" to="/auth/register">Create New</Link>
+                            <Link className="span_btn text_primary mt" to="/auth/register">Create new</Link>
                         </div>
-
 
                     </form>
                 </div>
