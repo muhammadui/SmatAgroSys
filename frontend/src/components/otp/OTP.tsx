@@ -82,7 +82,7 @@ const OTP = () => {
 
                     <div className="text_center mt">
                         <span className="mr">Didn't get a security code?</span>
-                        <Link className="span_btn text_primary mt" to="/auth/register">re-send it</Link>
+                        <Link className="span_btn text_primary mt" to="#">re-send it</Link>
                     </div>
 
                 </form>

@@ -6,6 +6,8 @@ import Home from "../views/home/Home";
 import Login from "../views/auth/login/Login";
 import Register from "../views/auth/register/Register";
 import OTP from "./otp/OTP";
+import Dashboard from "../views/dashboard/Dashboard";
+import Main from "./main/Main";
 
 // Global Style
 import "../index.css";
@@ -23,6 +25,10 @@ const App = () => {
         <Route path="/auth/register" element={<Register />} />
 
         <Route path="/otp" element={<OTP />} />
+
+        <Route path="/dashboard" element={<Dashboard />}>
+          <Route index element={<Main />} />
+        </Route>
 
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
