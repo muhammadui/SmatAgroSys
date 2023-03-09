@@ -1,6 +1,6 @@
 import * as React from "react";
 import { useState } from "react";
-import { Outlet } from "react-router";
+import { Outlet, useLocation } from "react-router";
 import { Link } from "react-router-dom";
 import Navigation from "../../components/navigation/Navigation";
 
@@ -10,6 +10,7 @@ import "./Dashboard.css";
 
 const Dashboard = () => {
     const [fullWidth, setFullWidth] = useState<boolean>(false);
+    const location = useLocation();
 
     return (
         <>
@@ -35,7 +36,7 @@ const Dashboard = () => {
                             </svg>
                         </span>
 
-                        <Link to="#">Dashboard</Link>
+                        <Link to="/dashboard" className={`${location.pathname === "/dashboard" ? 'active' : ''}`}>Dashboard</Link>
                     </div>
 
                     <div className="flex_start_center mb2">
@@ -45,7 +46,7 @@ const Dashboard = () => {
                             </svg>
                         </span>
 
-                        <Link to="#">My farms</Link>
+                        <Link to="/dashboard/my_farms" className={`${location.pathname === "/dashboard/my_farms" ? 'active' : ''}`}>My farms</Link>
                     </div>
 
                     <div className="flex_start_center mb2">
@@ -55,7 +56,7 @@ const Dashboard = () => {
                             </svg>
                         </span>
 
-                        <Link to="#">FAQs</Link>
+                        <Link to="/dashboard/faqs" className={`${location.pathname === "/dashboard/faqs" ? 'active' : ''}`}>FAQs</Link>
                     </div>
 
                     <div className="flex_start_center mb2">
@@ -65,7 +66,7 @@ const Dashboard = () => {
                             </svg>
                         </span>
 
-                        <Link to="#">Forum</Link>
+                        <Link to="/dashboard/forum" className={`${location.pathname === "/dashboard/forum" ? 'active' : ''}`}>Forum</Link>
                     </div>
 
                     <div className="flex_start_center mb2">
@@ -75,7 +76,7 @@ const Dashboard = () => {
                             </svg>
                         </span>
 
-                        <Link to="#">Reminder</Link>
+                        <Link to="/dashboard/reminder" className={`${location.pathname === "/dashboard/reminder" ? 'active' : ''}`}>Reminder</Link>
                     </div>
                 </div>
 

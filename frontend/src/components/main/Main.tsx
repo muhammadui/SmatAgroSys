@@ -8,7 +8,7 @@ const Main = () => {
 
     return (
         <div className="main_section">
-            <p className="header">Welcome <strong className="text_primary">John</strong>.</p>
+            <p className="dash_header">Welcome <strong className="text_primary">John</strong>.</p>
             <hr />
 
             <div className="cards">

@@ -1,13 +1,13 @@
 import * as React from "react";
 
 // Style
-import "./Forum.css";
+import "./Reminder.css";
 
-const Forum = () => {
+const Reminder = () => {
 
     return (
         <div className="farm_section">
-            <p className="dash_header">Forum</p>
+            <p className="dash_header">Reminder</p>
             <hr />
 
             <p className="mt2 text_center">Coming soon...</p>
@@ -15,4 +15,4 @@ const Forum = () => {
     )
 }
 
-export default Forum;
+export default Reminder;
