@@ -12,6 +12,7 @@ import MyFarms from "./farm/MyFarms";
 import FAQs from "./faqs/FAQs";
 import Forum from "./forum/Forum";
 import Reminder from "./reminder/Reminder";
+import CreateFarm from "./farm/create/CreateFarm";
 
 // Global Style
 import "../index.css";
@@ -36,6 +37,7 @@ const App = () => {
           <Route path="faqs" element={<FAQs />} />
           <Route path="forum" element={<Forum />} />
           <Route path="reminder" element={<Reminder />} />
+          <Route path="create_farm" element={<CreateFarm />} />
         </Route>
 
         <Route path="*" element={<Navigate to="/" />} />

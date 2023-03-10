@@ -20,7 +20,7 @@ const Dashboard = () => {
             <div className="dashboard_section">
                 {/* Side Section */}
                 <div className={`side ${fullWidth ? 'hide' : ''}`}>
-                    <Link to="#" className="btn_bg mb2">
+                    <Link to="/dashboard/create_farm" className="btn_bg mb2">
                        <span className="mr">Create new farm</span> 
                        <span className="btn_icon">
                             <svg width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">

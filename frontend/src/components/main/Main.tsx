@@ -1,5 +1,5 @@
 import * as React from "react";
-
+import { Link } from "react-router-dom";
 
 // Style
 import "./Main.css";
@@ -16,19 +16,19 @@ const Main = () => {
                 <div className="card">
                     <h2 className="mb">2</h2>
                     <p className="mb">Farms</p>
-                    <button className="btn_outline">View</button>
+                    <Link to="/dashboard/my_farms" className="btn_outline">View</Link>
                 </div>
 
                 <div className="card">
-                    <h2 className="text_orange mb">2</h2>
-                    <p className="text_orange mb">Farms</p>
-                    <button className="btn_outline">View</button>
+                    <h2 className="text_orange mb">1</h2>
+                    <p className="text_orange mb">On Harvesting</p>
+                    <Link to="#" className="btn_outline">View</Link>
                 </div>
 
                 <div className="card">
-                    <h2 className="text_primary mb">2</h2>
-                    <p className="text_primary mb">Farms</p>
-                    <button className="btn_outline">View</button>
+                    <h2 className="text_primary mb">4</h2>
+                    <p className="text_primary mb">Harvested</p>
+                    <Link to="#" className="btn_outline">View</Link>
                 </div>
 
             </div>

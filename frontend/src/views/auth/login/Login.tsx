@@ -72,7 +72,7 @@ const Login = () => {
                                 {...register("loginId", { required: true })}
                                 required 
                             />
-                            {errors.loginId ? <p className="error">Login ID is requied.</p> : null}
+                            {errors.loginId ? <p className="error">Login ID is required.</p> : null}
                         </div>
 
                         <div className="form_group">

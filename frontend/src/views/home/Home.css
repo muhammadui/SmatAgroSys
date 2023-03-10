@@ -129,9 +129,6 @@ nav.home_nav {
 }
 .banner_left p {font-size: 1.2rem;line-height: 2rem;}
 
-.banner_right {
-    position: relative;
-}
 .banner_right .top_image, .banner_right .bottom_image {
     width: 60%;
     height: 60%;
@@ -173,14 +170,12 @@ nav.home_nav {
     width: 100%;
     min-height: 300px;
     box-shadow: 0 0 2px 1px var(--gray);
-    /* border: 1.4px solid var(--gray); */
     border-radius: 20px;
     padding: 30px;
     transition: transform 0.4s ease;
     overflow: hidden;
     cursor: default;
 }
-.about_section .cards .card:hover {transform: scale(1.08);}
 
 .about_section .cards .card .card_image {
     display: inline-block;
@@ -212,12 +207,10 @@ nav.home_nav {
 @media screen and (min-width: 650px) {
     .home_nav_right .link {display: inline-block !important;}
     .banner_section {flex-direction: row;}
-    .banner_left, .banner_right {
-        width: 50%;
-        height: 60vh;
-    }
+    .banner_left, .banner_right {width: 50%;height: 60vh;}
 
     .about_section .cards {grid-template-columns: auto auto;}
+    .about_section .cards .card:hover {transform: scale(1.08);}
 
 }
 

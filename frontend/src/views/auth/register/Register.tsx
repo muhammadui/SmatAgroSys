@@ -101,7 +101,7 @@ const Register = () => {
                                 {...register("fullName", { required: true })}
                                 required 
                             />
-                            {errors.fullName ? <p className="error">Full Name is requied.</p> : null}
+                            {errors.fullName ? <p className="error">Full Name is required.</p> : null}
                         </div>
 
                         <div className="form_group">
@@ -111,7 +111,7 @@ const Register = () => {
                                 {...register("email", { required: true })}
                                 required 
                             />
-                            {errors.email ? <p className="error">Email is requied.</p> : null}
+                            {errors.email ? <p className="error">Email is required.</p> : null}
                         </div>
 
                         <div className="form_group">
@@ -121,7 +121,7 @@ const Register = () => {
                                 {...register("phone", { required: true })}
                                 required 
                             />
-                            {errors.phone ? <p className="error">Phone number is requied.</p> : null}
+                            {errors.phone ? <p className="error">Phone number is required.</p> : null}
                         </div>
 
                         <div className="form_group">
@@ -145,7 +145,7 @@ const Register = () => {
                         </div>
 
                         <div className="form_group">
-                            <input type="submit" value="Create Account" className="register_btn" />
+                            <input type="submit" value="Create Account" className="reg_btn" />
                         </div>
 
                         <div className="google_sign_in_out_wrapper" onClick={handleGoogleRegister}>
