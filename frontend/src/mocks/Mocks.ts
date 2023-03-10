@@ -38,6 +38,24 @@ export const farm_products = [
     }
 ];
 
+// Farm Process
+export const farm_process = [
+    {
+        processId: "1",
+        item: "Fertilizer",
+        quantity: "3 Bags",
+        price: 300,
+        dateAdded: new Date()
+    },
+    {
+        processId: "2",
+        item: "Insecticide",
+        quantity: "5 Can",
+        price: 700,
+        dateAdded: new Date()
+    }
+]
+
 // State & LGA
 export const state_lga = {
     "Abia": [
