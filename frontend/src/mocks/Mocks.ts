@@ -20,6 +20,24 @@ export const farms = [
     }
 ]
 
+// Farm Product
+export const farm_products = [
+    {
+        productId: "1",
+        name: "Maize",
+        startDate: new Date(),
+        endDate: new Date(),
+        status: false
+    },
+    {
+        productId: "2",
+        name: "Rice",
+        startDate: new Date(),
+        endDate: new Date(),
+        status: true
+    }
+];
+
 // State & LGA
 export const state_lga = {
     "Abia": [

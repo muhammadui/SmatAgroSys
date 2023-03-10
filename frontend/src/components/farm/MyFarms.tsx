@@ -39,7 +39,11 @@ const MyFarms = () => {
                                         <td className={farm.status === "active" ? 'text_orange' : ''}>
                                             {farm.status === "active" ? "Active" : "Not Active"}
                                         </td>
-                                        <td>...</td>
+                                        <td>
+                                            <button className="btn_outline"
+                                                onClick={() => navigate(`/dashboard/view_farm/${farm.farmId}`)}
+                                            >View</button>
+                                        </td>
                                     </tr>
                                 ))
                             }
