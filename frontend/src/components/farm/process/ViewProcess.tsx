@@ -7,7 +7,7 @@ import AddProcess from "./add/AddProcess";
 import "./ViewProcess.css";
 
 const ViewProcess = () => {
-    const [addPro, setAddPro] = useState<boolean>(true);
+    const [addPro, setAddPro] = useState<boolean>(false);
 
     const displayFarmDetails = () => {
 
