@@ -42,7 +42,7 @@
     margin: 30px 0;
 }
 
-.otp_right .form textarea {
+/* .otp_right .form textarea {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -54,6 +54,21 @@
     outline: none;
     font-size: 1.4rem;
     padding: 16px 17px;
+} */
+.otp_right .form .verfication_wrapper input {
+    width: 50px;
+    height: 60px;
+    text-align: center;
+    border: 1.2px solid var(--primary-color);
+    border-radius: 8px;
+    font-size: 20px;
+    resize: none;
+    outline: none;
+}
+
+.otp_right .form .verfication_wrapper input::-webkit-outer-spin-button,
+.otp_right .form .verfication_wrapper input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
 }
 
 .otp_btn {
