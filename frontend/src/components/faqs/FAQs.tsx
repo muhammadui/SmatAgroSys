@@ -1,13 +1,13 @@
 import * as React from "react";
 
 // Style
-import "./Forum.css";
+import "./FAQs.css";
 
-const Forum = () => {
+const FAQs = () => {
 
     return (
-        <div className="farm_section">
-            <p className="dash_header">Forum</p>
+        <div className="faqs_section">
+            <p className="dash_header">FAQs</p>
             <hr />
 
             <p className="mt2 text_center">Coming soon...</p>
@@ -15,4 +15,4 @@ const Forum = () => {
     )
 }
 
-export default Forum;
+export default FAQs;

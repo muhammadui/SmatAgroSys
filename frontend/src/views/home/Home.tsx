@@ -52,7 +52,7 @@ const Home = () => {
                 <div className={`mobile_section ${toggler ? 'show' : ''}`}>
                     <div className="links_wrapper">
                         <Link className="link mr mb2" to="#">Contact</Link>
-                        <Link className="link mr mb2" to="#">Login</Link>
+                        <Link className="link mr mb2" to="/auth/login">Login</Link>
                         <Link className="link border_white" to="#">Get Started</Link>
                     </div>
 
@@ -71,8 +71,16 @@ const Home = () => {
                                 explicabo libero dolore reiciendis.
                             </p>
 
-                            <div className="mt2">
-                                <button className="btn_bg btn_big mr2">Get Started</button>
+                            <div className="flex_start_center mt2">
+                                <button className="btn_bg btn_big mr2">
+                                    <span className="mr">Get Started</span>
+                                    <span className="arrow">
+                                        <svg width="20" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12.5391 2.6543L21 8.99995L12.5391 15.3456" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                                            <path d="M20.9999 9L3 9" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                                        </svg>
+                                    </span>
+                                </button>
                                 <button className="btn_outline btn_big">Talk to us</button>
                             </div>
                         </div>

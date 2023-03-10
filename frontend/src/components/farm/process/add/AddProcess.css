@@ -1,0 +1,59 @@
+.add_process_section {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px;
+    transform: translateX(-120vw);
+    transition: transform 0.6s ease;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(2px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 30;
+}
+.add_process_section.show {transform: translateX(0);}
+
+.add_process_section .form {
+    width: 100%;
+    padding: 30px;
+    border-radius: 6px;
+    background-color: #fff;
+    color: #000;
+}
+
+.add_process_section .form .input {background-color: #fff;}
+.add_process_section .reg_btn, .add_process_section .btn_bg, 
+.add_process_section .btn_outline {border-radius: 6px;padding: 8px 10px;}
+
+.add_process_section .close_btn {
+    position: absolute;
+    top: -14px;
+    right: -14px;
+    width: 50px;
+    height: 50px;
+    border: 1.2px solid var(--primary-color);
+    background-color: var(--white);
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    cursor: pointer;
+}
+.add_process_section .close_btn:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+
+
+@media screen and (min-width: 650px) {
+    .add_process_section .form {
+        max-width: 400px;
+    }
+}
