@@ -1,10 +1,13 @@
 import * as React from "react";
+import { useState } from "react";
 import { farm_process } from "../../../mocks/Mocks";
+import AddProcess from "./add/AddProcess";
 
 // Style
 import "./ViewProcess.css";
 
 const ViewProcess = () => {
+    const [addPro, setAddPro] = useState<boolean>(true);
 
     const displayFarmDetails = () => {
 
@@ -43,7 +46,7 @@ const ViewProcess = () => {
                 </div>
 
                 <div className="flex_between_center mt2">
-                    <button className="btn_bg">Add item</button>
+                    <button className="btn_bg"  onClick={() => setAddPro(true)}>Add item</button>
                     <button className="btn_outline">End Process</button>
                 </div>
             </>
@@ -51,12 +54,17 @@ const ViewProcess = () => {
     }
 
     return (
-        <div className="view_farm_section">
-            <p className="dash_header">View Process</p>
-            <hr />
+        <>
+            {/* Add Process */}
+            <AddProcess addPro={addPro} setAddPro={setAddPro} />
 
-            {displayFarmDetails()}
-        </div>
+            <div className="view_farm_section">
+                <p className="dash_header">View Process</p>
+                <hr />
+
+                {displayFarmDetails()}
+            </div>
+        </>
     );
 }
 
