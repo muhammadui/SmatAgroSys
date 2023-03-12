@@ -33,7 +33,7 @@ body {
 
 .container {width: 90%;margin: 0 auto;}
 
-a {text-decoration: none;}
+a {text-decoration: none;color: #777676;}
 
 /* Logo Section */
 .logo {
