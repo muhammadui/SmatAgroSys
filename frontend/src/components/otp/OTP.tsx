@@ -29,10 +29,10 @@ const OTP = () => {
         if(e.key.toLowerCase() === "backspace"){
             const digits = ["digit1", "digit2", "digit3", "digit4", "digit5"];
             setCode({...code, [e.target.name]: ""});
-            return e.target.focus();
-            // const idx = digits.indexOf(e.target.name);
-            // if(idx === 0){return e.target.focus();} 
-            // e.target.previousSibling.focus();
+            // return e.target.focus();
+            const idx = digits.indexOf(e.target.name);
+            if(idx === 0){return e.target.focus();} 
+            return e.target.previousSibling.focus();
         }
 
         if(e.target.value && e.target.name !== "digit5"){ 
@@ -67,11 +67,11 @@ const OTP = () => {
                     </p>
 
                     <div className="verfication_wrapper">
-                        <textarea typeof="number" name="digit1" id="digit1" value={code.digit1} onChange={handleChange} onKeyUp={handleKeyUp}></textarea>
-                        <textarea typeof="number" name="digit2" id="digit2" value={code.digit2} onChange={handleChange} onKeyUp={handleKeyUp}></textarea>
-                        <textarea typeof="number" name="digit3" id="digit3" value={code.digit3} onChange={handleChange} onKeyUp={handleKeyUp}></textarea>
-                        <textarea typeof="number" name="digit4" id="digit4" value={code.digit4} onChange={handleChange} onKeyUp={handleKeyUp}></textarea>
-                        <textarea typeof="number" name="digit5" id="digit5" value={code.digit5} onChange={handleChange} onKeyUp={handleKeyUp}></textarea>
+                        <input type="number" name="digit1" id="digit1" value={code.digit1} onChange={handleChange} onKeyUp={handleKeyUp} />
+                        <input type="number" name="digit2" id="digit2" value={code.digit2} onChange={handleChange} onKeyUp={handleKeyUp} />
+                        <input type="number" name="digit3" id="digit3" value={code.digit3} onChange={handleChange} onKeyUp={handleKeyUp} />
+                        <input type="number" name="digit4" id="digit4" value={code.digit4} onChange={handleChange} onKeyUp={handleKeyUp} />
+                        <input type="number" name="digit5" id="digit5" value={code.digit5} onChange={handleChange} onKeyUp={handleKeyUp} />
                     </div>
 
                     <div className="form_group">
