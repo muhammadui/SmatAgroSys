@@ -60,7 +60,6 @@ const Home = () => {
                 </div>
                 
                 <div className="container">
-
                     {/* Banner */}
                     <div className="banner_section">
                         <div className="banner_left">
@@ -156,9 +155,11 @@ const Home = () => {
 
                         </div>
                     </div>
-
-                    <Footer />
                 </div>
+                
+
+                {/* Footer */}
+                <Footer />
             </div>
         </>
     )
