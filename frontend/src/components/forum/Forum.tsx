@@ -7,6 +7,10 @@ import "./Forum.css";
 
 const Forum = () => {
     const [showAddPost, setShowAddPost] = useState<boolean>(false);
+    const [commentsInfo, setCommentsInfo] = useState({
+        show: false,
+        postId: "1"
+    })
 
     return (
         <>
@@ -40,6 +44,7 @@ const Forum = () => {
                 </div>
 
                 {/* Forum Card Section */}
+                {/* Post 1 */}
                 <div className="mt2">
                     <div className="forum_card">
                         <div className="card_header">
@@ -65,9 +70,52 @@ const Forum = () => {
                                             <path d="M0 16V10L8 8L0 6V0L19 8L0 16Z" fill="black"/>
                                         </svg>
                                     </span>
-                                    <span className="span_btn">5 Comments</span>
+                                    <span className="span_btn" 
+                                        onClick={() => setCommentsInfo({
+                                            ...commentsInfo,
+                                            postId: "1",
+                                            show: !commentsInfo.show
+                                        })}
+                                    >2 Comments</span>
                                 </button>
                             </div>
+                            
+                            {/* Comment Section */}
+                            {
+                                commentsInfo.show && commentsInfo.postId === "1" ? (
+                                    <div className="comment_section mt2">
+
+                                        {/* Line */}
+                                        <div className="flex_start_center mb">
+                                            <div className="line_content">Comments</div>
+                                            <div className="line"></div>
+                                        </div>
+
+                                        {/* Comment*/}
+                                        <div className="comment mb">
+                                            <div className="com_image">CM</div>
+                                            <div className="com_content">
+                                                <p>
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                                    Quis ullam corrupti nam nemo facere assumenda eligendi.
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        {/* Comment*/}
+                                        <div className="comment mb">
+                                            <div className="com_image">DM</div>
+                                            <div className="com_content">
+                                                <p>
+                                                    dolor sit amet consectetur adipisicing elit and {" "}
+                                                    <strong className="text_primary">@CM</strong> {" "}
+                                                    Quis ullam corrupti nam nemo facere.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                ) : null
+                            }
 
                             <div className="form_group">
                                 <textarea className="input" 
@@ -90,13 +138,14 @@ const Forum = () => {
                     </div>
                 </div>
 
+                {/* Post 2 */}
                 <div className="mt2">
                     <div className="forum_card">
                         <div className="card_header">
-                            <div className="image">PP</div>
+                            <div className="image">JS</div>
                             <div className="content">
-                                <h4>Peter Paul<span>Farmer</span></h4>
-                                <small>1 hour ago</small>
+                                <h4>James Smith <span>Farmer</span></h4>
+                                <small>2 hours ago</small>
                             </div>
                         </div>
 
@@ -104,8 +153,7 @@ const Forum = () => {
                             <p>
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                                 Quo numquam voluptas officia, eligendi velit ratione unde 
-                                quasi nobis quidem est, consectetur, nam quisquam asperiores? 
-                                Nobis quibusdam illum assumenda rem quae.
+                                quasi nobis quidem est, consectetur, nam quisquam asperiores?
                             </p>
 
                             <div className="flex_end_center mt2">
@@ -115,9 +163,53 @@ const Forum = () => {
                                             <path d="M0 16V10L8 8L0 6V0L19 8L0 16Z" fill="black"/>
                                         </svg>
                                     </span>
-                                    <span className="span_btn">5 Comments</span>
+                                    <span className="span_btn" 
+                                        onClick={() => setCommentsInfo({
+                                            ...commentsInfo, 
+                                            postId: "2",
+                                            show: !commentsInfo.show
+                                        })}
+                                    >0 Comments</span>
                                 </button>
                             </div>
+                            
+                            {/* Comment Section */}
+                            {
+                                commentsInfo.show && commentsInfo.postId === "2" ? (
+                                    <div className="comment_section mt2">
+
+                                        {/* Line */}
+                                        <div className="flex_start_center mb">
+                                            <div className="line_content">Comments</div>
+                                            <div className="line"></div>
+                                        </div>
+
+                                        {/* Comment*/}
+                                        <p className="text_center mt2">No comment.</p>
+                                        {/* <div className="comment mb">
+                                            <div className="com_image">CM</div>
+                                            <div className="com_content">
+                                                <p>
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                                    Quis ullam corrupti nam nemo facere assumenda eligendi.
+                                                </p>
+                                            </div>
+                                        </div> */}
+
+                                        {/* Comment*/}
+                                        {/* <div className="comment mb">
+                                            <div className="com_image">DM</div>
+                                            <div className="com_content">
+                                                <p>
+                                                    dolor sit amet consectetur adipisicing elit and {" "}
+                                                    <strong className="text_primary">@CM</strong> {" "}
+                                                    Quis ullam corrupti nam nemo facere.
+                                                </p>
+                                            </div>
+                                        </div> */}
+                                    </div>
+                                ) : null
+                            }
 
                             <div className="form_group">
                                 <textarea className="input" 
