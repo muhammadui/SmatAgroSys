@@ -227,25 +227,37 @@ nav.home_nav {
     align-items: center;
 }
 .create_account_wrapper .account_content h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin-bottom: 20px;
 }
 
 .create_account_wrapper .account_content ul {
     list-style-position: inside;
-    list-style-image: url("/check_circle.svg");
+    list-style-type: none;
     margin: 0;
 }
 
 .create_account_wrapper .account_content ul li {
-    position: relative;
     margin-bottom: 12px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.account_content .li_icon {
+    width: 30px;
+    min-width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: url("/check_circle.svg") no-repeat center;
+    background-position: center;
+    margin-right: 8px;
 }
 
 .create_account_wrapper .account_image {
     width: 100%;
     height: 70vh;
-    max-width: 300px;
+    max-width: 400px;
     max-height: 300px;
     display: none;
     justify-content: flex-end;
@@ -264,6 +276,7 @@ nav.home_nav {
     border: 1.4px solid #000;
     background-color: #000 !important;
     color: #fff !important;
+    padding: 8px 16px;font-size: 20px;
 }
 .create_account_wrapper .account_content .btn_bg:hover {
     background-color: #fff !important;
@@ -273,6 +286,7 @@ nav.home_nav {
     border: 1.4px solid #000;
     background-color: #fff !important;
     color: #000 !important;
+    padding: 8px 16px;font-size: 20px;
 }
 .create_account_wrapper .account_content .btn_outline:hover {
     background-color: #000 !important;
@@ -364,7 +378,6 @@ nav.home_nav {
 .contact_wrapper .content,
 .contact_wrapper .contact_form {
     min-height: 50vh;
-    /* border: 1px solid #000 */
 }
 
 .contact_wrapper .content {padding-right: 40px;}
@@ -389,6 +402,49 @@ nav.home_nav {
     padding: 10px 0;
 }
 
+/* Footer Section */
+.footer_section {
+    width: 100%;
+    margin-top: 30px;
+    padding: 20px 0;
+}
+
+.footer_wrapper {
+    display: grid;
+    justify-content: space-between;
+    align-items: center;
+    grid-template-columns: 100%;
+    gap: 20px;
+}
+
+.footer_right {
+    display: grid;
+    justify-content: space-between;
+    justify-content: center;
+    grid-template-columns: repeat(2, calc(50% - 20px));
+    gap: 20px;
+}
+.footer_inner_right {min-height: 150px;}
+
+.footer_inner_right ul {list-style-type: none;}
+.footer_inner_right ul li {margin-bottom: 6px;}
+.footer_inner_right ul a:hover {color: var(--primary-color);}
+
+.social_icon {
+    width: 30px;
+    min-width: 30px;
+    height: 30px;
+    border-radius: 4px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 6px;
+    transition: transform 0.4s ease;
+    cursor: pointer;
+}
+.social_icon:hover {transform: translateY(-8px);}
+.social_icon svg {width: 100%;height: 100%;object-fit: contain;}
+
+
 
 @media screen and (min-width: 650px) {
     .home_nav_right .link {display: inline-block !important;}
@@ -398,7 +454,10 @@ nav.home_nav {
     .about_section .cards {grid-template-columns: auto auto;}
     .about_section .cards .card:hover {transform: scale(1.08);}
 
-    .create_account_wrapper .account_content {padding-right: 20px;}
+    .create_account_wrapper .account_content {
+        width: 60%;
+        padding-right: 20px;
+    }
     .create_account_wrapper .account_content h2 {width: 70%;}
     .create_account_wrapper .account_image {display: flex;}
 
@@ -415,5 +474,11 @@ nav.home_nav {
 
 @media screen and (min-width: 800px) {
     .about_section .cards {grid-template-columns: auto auto auto;}
+
+    .footer_wrapper {grid-template-columns: 30% 70%;}
+    .footer_right {
+        justify-content: space-between;
+        grid-template-columns: repeat(4, 20%);
+    }
 }
 
