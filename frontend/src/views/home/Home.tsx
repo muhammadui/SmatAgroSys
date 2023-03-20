@@ -51,7 +51,7 @@ const Home = () => {
                         </div>
 
                         <div className="home_nav_right">
-                            <Link className="link mr" to="#">Contact</Link>
+                            <Link className="link mr" to="#" onClick={() => window.location.href="#contact"}>Contact</Link>
                             <Link className="link border_gray mr" to="/auth/login">Login</Link>
                             <Link className="link btn_bg" to="#">Get Started</Link>
                             
@@ -72,7 +72,9 @@ const Home = () => {
                 {/* Mobile Menu */}
                 <div className={`mobile_section ${toggler ? 'show' : ''}`}>
                     <div className="links_wrapper">
-                        <Link className="link mr mb2" to="#">Contact</Link>
+                        <Link className="link mr mb2" to="#" 
+                            onClick={() => {setToggler(false); window.location.href="#contact"}}
+                        >Contact</Link>
                         <Link className="link mr mb2" to="/auth/login">Login</Link>
                         <Link className="link border_white" to="#">Get Started</Link>
                     </div>
@@ -254,7 +256,7 @@ const Home = () => {
                 </div>
                 
                 {/* Contact */}
-                <div className="contact_section">
+                <div className="contact_section" id="contact">
                     <div className="container">
                         <div className="contact_wrapper">
                             <div className="content">
