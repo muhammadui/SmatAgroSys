@@ -1,16 +1,31 @@
 import * as React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useLocation, useParams, useNavigate } from "react-router";
 import AddPost from "./addPost/AddPost";
+import Loader from "../loader/Loader";
+import { forums } from "../../services/services";
 
 // Style
 import "./Forum.css";
 
 const Forum = () => {
     const [showAddPost, setShowAddPost] = useState<boolean>(false);
+    const { forumId } = useParams<any>();
+    const [showForum, setShowForum] = useState<boolean>(false);
     const [commentsInfo, setCommentsInfo] = useState({
         show: false,
         postId: "1"
-    })
+    });
+    const navigate = useNavigate();
+    
+    useEffect(() => {
+
+        if(forumId && forums[forumId]){ return setShowForum(true); }
+        else { return navigate("/dashboard"); }
+
+    }, [forumId]);
+
+    if(!showForum){ return <Loader message="Processing page..." />}
 
     return (
         <>
@@ -18,7 +33,7 @@ const Forum = () => {
             <AddPost show={showAddPost} setShow={setShowAddPost} />
 
             <div className="forum_section">
-                <h2 className="dash_header text_primary">General Forum</h2>
+                <h2 className="dash_header text_primary">{forums[forumId!]}</h2>
                 <hr />
 
                 {/* Forum Header Section */}
