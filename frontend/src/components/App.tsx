@@ -37,7 +37,7 @@ const App = () => {
           <Route index element={<Main />} />
           <Route path="my_farms" element={<MyFarms />} />
           <Route path="faqs" element={<FAQs />} />
-          <Route path="forum" element={<Forum />} />
+          <Route path="forum/:forumId" element={<Forum />} />
           <Route path="reminder" element={<Reminder />} />
           <Route path="create_farm" element={<CreateFarm />} />
           <Route path="view_farm/:farmId" element={<ViewFarm />} />

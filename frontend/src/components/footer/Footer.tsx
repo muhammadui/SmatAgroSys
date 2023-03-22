@@ -9,9 +9,10 @@ const Footer = () => {
         <footer className="footer">
             <hr />
             <p className="mt2">
-                &copy; All Right Reserved {" "}
-                <strong className="text_primary">AGRO</strong> {" "}
-                {new Date().getFullYear()}.
+                Copyright &copy; {new Date().getFullYear()} {" "}
+                <span className="text_primary">AGROSIS</span> {" "}
+                | All Rights Reserved | <span className="span_btn">Terms and Conditions</span> {" "}
+                | Privacy Policy.
             </p>
         </footer>
     )
