@@ -132,17 +132,16 @@ nav.home_nav {
 .banner_left p {font-size: 1.2rem;line-height: 2rem;}
 
 .banner_right .top_image, .banner_right .bottom_image {
-    width: 60%;
-    height: 60%;
-    background-color: var(--gray);
+    width: 70%;
+    height: 70%;
     border-radius: 6px;
+    overflow: hidden;
 }
 
 .banner_right .top_image {
     position: absolute;
     top: 10px;
     right: 10px;
-    border: 1px solid skyblue;
     z-index: 4;
 }
 .banner_right .bottom_image {
@@ -183,7 +182,7 @@ nav.home_nav {
     display: inline-block;
     width: 70px;
     height: 70px;
-    border: 1px solid var(--gray);
+    border: 1px solid #f2f2f2;
     border-radius: 20px;
     margin-bottom: 10px;
     overflow: hidden;
@@ -258,8 +257,8 @@ nav.home_nav {
 .create_account_wrapper .account_image {
     width: 100%;
     height: 70vh;
-    max-width: 400px;
-    max-height: 300px;
+    max-width: 500px;
+    max-height: 400px;
     display: none;
     justify-content: flex-end;
     align-items: center;
@@ -295,11 +294,35 @@ nav.home_nav {
 }
 /* Button end */
 
-/* Download Section */
-.download_section {
-    margin: 40px 0;
-    padding: 20px 0;
+/* Problem Section */
+.problem_section {
+    width: 100%;
+    min-height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.problem_wrapper {
+    display: grid;
+    justify-content: space-between;
+    align-items: center;
+    grid-template-columns: 100%;
+    gap: 20px;
+}
+
+.problem_wrapper .pro_image {min-height: 45vh;}
+
+.problem_wrapper .pro_image img {width: 100%;height: 100%;object-fit: contain;}
+
+.problem_wrapper .pro_content {min-width: 300px;}
+
+.problem_wrapper .pro_content h2 {font-size: 1.8rem;}
+.problem_wrapper .pro_content p {font-size: 1.2rem;line-height: 2rem;}
+
+
+/* Download Section */
+.download_section {margin: 40px 0;padding: 20px 0;}
 
 .download_section .card_wrapper {
     display: grid;
@@ -451,6 +474,7 @@ nav.home_nav {
     .home_nav_right .link {display: inline-block !important;}
     .banner_section {flex-direction: row;}
     .banner_left, .banner_right {width: 50%;height: 60vh;}
+    .banner_right .top_image, .banner_right .bottom_image {width: 60%;}
 
     .about_section .cards {grid-template-columns: auto auto;}
     .about_section .cards .card:hover {transform: scale(1.08);}
@@ -469,6 +493,13 @@ nav.home_nav {
     .contact_wrapper {
         grid-template-columns: repeat(2, 50%);
     }
+
+    /* Problem Section */
+    .problem_wrapper {
+        grid-template-columns: repeat(2, calc(50% - 20px));
+    }
+    
+    .problem_wrapper .pro_content {padding: 30px;}
 
 }
 

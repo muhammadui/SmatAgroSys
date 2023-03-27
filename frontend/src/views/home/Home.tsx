@@ -6,6 +6,20 @@ import { useForm, SubmitHandler } from "react-hook-form";
 import Loader from "../../components/loader/Loader";
 // Images 
 import image from "../../assets/image.png";
+import banner1 from "../../assets/images/banner1.png";
+import banner2 from "../../assets/images/banner2.png";
+import create_account from "../../assets/images/create_account.png";
+import problem_to_solve from "../../assets/images/problem_to_solve.png";
+
+// Icons
+import farm_magnt_icon from "../../assets/icons/farm_magnt_icon.png";
+import farmers_connect_icon from "../../assets/icons/farmers_connect_icon.png";
+import growth_tracking_icon from "../../assets/icons/growth_tracking_icon.png";
+import martket_place_icon from "../../assets/icons/market_place_icon.png";
+import expert_advice_icon from "../../assets/icons/expert_advice_icon.png";
+import auto_reminders_icon from "../../assets/icons/auto_reminders_icon.png";
+
+
 
 // Style
 import "./Home.css";
@@ -51,7 +65,7 @@ const Home = () => {
                         </div>
 
                         <div className="home_nav_right">
-                            <Link className="link mr" to="#" onClick={() => window.location.href="#contact"}>Contact</Link>
+                            <a href="#contact" className="link mr">Contact</a>
                             <Link className="link border_gray mr" to="/auth/login">Login</Link>
                             <Link className="link btn_bg" to="#">Get Started</Link>
                             
@@ -72,9 +86,7 @@ const Home = () => {
                 {/* Mobile Menu */}
                 <div className={`mobile_section ${toggler ? 'show' : ''}`}>
                     <div className="links_wrapper">
-                        <Link className="link mr mb2" to="#" 
-                            onClick={() => {setToggler(false); window.location.href="#contact"}}
-                        >Contact</Link>
+                        <a href="#contact" className="link mr mb2">Contact</a>
                         <Link className="link mr mb2" to="/auth/login">Login</Link>
                         <Link className="link border_white" to="#">Get Started</Link>
                     </div>
@@ -86,11 +98,10 @@ const Home = () => {
                     {/* Banner */}
                     <div className="banner_section">
                         <div className="banner_left">
-                            <h2>Manage your crops, fields and task in one place.</h2>
+                            <h2>Manage your Farm, Get Advise & Explore, in One Place.</h2>
                             <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                Unde ipsa repudiandae maiores iure similique velit numquam 
-                                explicabo libero dolore reiciendis.
+                                SmatAgro is a tech driven solution to empower local farmers leading to food 
+                                security, higher crop yields, climate-smart & sustainable agriculture.
                             </p>
 
                             <div className="flex_start_center mt2">
@@ -108,8 +119,8 @@ const Home = () => {
                         </div>
 
                         <div className="banner_right">
-                            <div className="top_image"><img src={image} alt="Image1" /></div>
-                            <div className="bottom_image"><img src={image} alt="Image1" /></div>
+                            <div className="top_image"><img src={banner1} alt="Banner1" /></div>
+                            <div className="bottom_image"><img src={banner2} alt="Banner2" /></div>
                         </div>
                     </div>
 
@@ -117,62 +128,64 @@ const Home = () => {
                     <div className="about_section">
                         <h2 className="h_center">Empowering Famers and Agro-Business</h2>
                         <p className="p_center">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                            Cum quia vel laudantium quos repellendus quo magni. 
+                            Better quality produce, smart farming and access to market by engaging our 
+                            local farmers with professionals through a gamified extension service platform
                         </p>
 
                         <div className="cards">
                             <div className="card">
-                                <div className="card_image"><img src={image} alt="Icon" /></div>
-                                <h4 className="card_title">Crop Diagnosis</h4>
+                                <div className="card_image"><img src={farm_magnt_icon} alt="Icon" /></div>
+                                <h4 className="card_title">Farm Management</h4>
                                 <p className="card_content">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                    Cum quia vel laudantium quos repellendus quo magni.
+                                    Organize and manage all your farms in one place, with an intuitive tools for 
+                                    tracking planting schedules, crop rotations, harvesting & after harvest.
                                 </p>
                             </div>
                             
                             <div className="card">
-                                <div className="card_image"><img src={image} alt="Icon" /></div>
-                                <h4 className="card_title">Crop Diagnosis</h4>
+                                <div className="card_image"><img src={farmers_connect_icon} alt="Icon" /></div>
+                                <h4 className="card_title">Farmers Connect</h4>
                                 <p className="card_content">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                    Cum quia vel laudantium quos repellendus quo magni.
+                                    Connect with other farmers and professionals from and outside your community to 
+                                    share resources with our social forum and earn a recognition.
                                 </p>
                             </div>
 
                             <div className="card">
-                                <div className="card_image"><img src={image} alt="Icon" /></div>
-                                <h4 className="card_title">Crop Diagnosis</h4>
+                                <div className="card_image"><img src={growth_tracking_icon} alt="Icon" /></div>
+                                <h4 className="card_title">Growth Tracking</h4>
                                 <p className="card_content">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                    Cum quia vel laudantium quos repellendus quo magni.
+                                    Monitor the growth of your crops, activities and stay updated on their health status 
+                                    with our easy-to-use and simple tracking tools.
                                 </p>
                             </div>
 
                             <div className="card">
-                                <div className="card_image"><img src={image} alt="Icon" /></div>
-                                <h4 className="card_title">Crop Diagnosis</h4>
+                                <div className="card_image"><img src={martket_place_icon} alt="Icon" /></div>
+                                <h4 className="card_title">Marketplace</h4>
                                 <p className="card_content">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                    Cum quia vel laudantium quos repellendus quo magni.
+                                    Talk about Buy and sell crops and other agricultural products directly, 
+                                    Connect with local markets & whole sellers to expand your business and 
+                                    make more profits.
                                 </p>
                             </div>
 
                             <div className="card">
-                                <div className="card_image"><img src={image} alt="Icon" /></div>
-                                <h4 className="card_title">Crop Diagnosis</h4>
+                                <div className="card_image"><img src={expert_advice_icon} alt="Icon" /></div>
+                                <h4 className="card_title">Expert Advice</h4>
                                 <p className="card_content">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                    Cum quia vel laudantium quos repellendus quo magni.
+                                    Connect with agric- extension officers to receive personalized recommendations 
+                                    for your crops and real time decision support based on your specific growing 
+                                    conditions and challenges.
                                 </p>
                             </div>
 
                             <div className="card">
-                                <div className="card_image"><img src={image} alt="Icon" /></div>
-                                <h4 className="card_title">Crop Diagnosis</h4>
+                                <div className="card_image"><img src={auto_reminders_icon} alt="Icon" /></div>
+                                <h4 className="card_title">Auto Reminders</h4>
                                 <p className="card_content">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                    Cum quia vel laudantium quos repellendus quo magni.
+                                    Never miss a task or important date, with our AI powered reminders you will keep 
+                                    track of what need to be done and stay organized & productive.
                                 </p>
                             </div>
 
@@ -202,8 +215,28 @@ const Home = () => {
                                 </div>
                             </div>
                             
-                            <div className="account_image"><img src={image} alt="Image" /></div>
+                            <div className="account_image"><img src={create_account} alt="Image" /></div>
 
+                        </div>
+                    </div>
+                </div>
+
+                {/* The Problem to solve */}
+                <div className="problem_section">
+                    <div className="container">
+                        <div className="problem_wrapper">
+                            <div className="pro_image"><img src={problem_to_solve} alt="Image" /></div>
+
+                            <div className="pro_content">
+                                <h2 className="mb2">What problems do we solve?</h2>
+
+                                <p>
+                                    Lack of access to up-to-date information on crop cultivation & harvesting, 
+                                    pest management, adopting new techniques and expert advise this result in 
+                                    increasing the risk of crop failure and reducing yields and poor-quality 
+                                    produce among local farmers.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -215,8 +248,7 @@ const Home = () => {
                             <div className="card">
                                 <h2>Download our app for iOS <br />and iPadOS</h2>
                                 <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                    Quae nostrum assumenda saepe sequi dolores natus.
+                                    Click the button below to download our app directly.
                                 </p>
 
                                 <div className="mt2">
@@ -235,8 +267,7 @@ const Home = () => {
                             <div className="card">
                                 <h2>Download our app for <br />Android</h2>
                                 <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                    Quae nostrum assumenda saepe sequi dolores natus.
+                                    Click the button below to download our app directly.
                                 </p>
 
                                 <div className="mt2">
@@ -378,8 +409,7 @@ const Home = () => {
                                 </div>
 
                                 <p className="mt2" style={{fontSize: "14px"}}>
-                                    Lorem ipsum dolor sit amet consectetur <br />
-                                    adipiscing elit aliquam mauris sed ma
+                                    Creating Sustainability Through Agriculture...
                                 </p>
 
                                 <div className="flex_start_center mt2" style={{flexWrap: "wrap"}}>
@@ -423,7 +453,7 @@ const Home = () => {
                                         <Link to="#"><li>Market place</li></Link>
                                         <Link to="#"><li>Farms</li></Link>
                                         <Link to="#"><li>Weathers</li></Link>
-                                        <Link to="#"><li>Fields</li></Link>
+                                        <Link to="#"><li>Forum</li></Link>
                                         <Link to="#"><li>Recommender</li></Link>
                                     </ul>
                                 </div>
