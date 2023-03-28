@@ -297,7 +297,7 @@ nav.home_nav {
 /* Problem Section */
 .problem_section {
     width: 100%;
-    min-height: 60vh;
+    min-height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -498,7 +498,7 @@ nav.home_nav {
     .problem_wrapper {
         grid-template-columns: repeat(2, calc(50% - 20px));
     }
-    
+
     .problem_wrapper .pro_content {padding: 30px;}
 
 }

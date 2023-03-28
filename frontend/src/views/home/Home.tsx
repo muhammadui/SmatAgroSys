@@ -5,7 +5,6 @@ import Footer from "../../components/footer/Footer";
 import { useForm, SubmitHandler } from "react-hook-form";
 import Loader from "../../components/loader/Loader";
 // Images 
-import image from "../../assets/image.png";
 import banner1 from "../../assets/images/banner1.png";
 import banner2 from "../../assets/images/banner2.png";
 import create_account from "../../assets/images/create_account.png";
@@ -18,8 +17,6 @@ import growth_tracking_icon from "../../assets/icons/growth_tracking_icon.png";
 import martket_place_icon from "../../assets/icons/market_place_icon.png";
 import expert_advice_icon from "../../assets/icons/expert_advice_icon.png";
 import auto_reminders_icon from "../../assets/icons/auto_reminders_icon.png";
-
-
 
 // Style
 import "./Home.css";
