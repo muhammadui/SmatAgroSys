@@ -1,0 +1,5 @@
+.farmer_services_section .table .btn_bg {border-radius: 4px;}
+
+.pending {color: orange;}
+.connected {color: var(--primary-color);}
+

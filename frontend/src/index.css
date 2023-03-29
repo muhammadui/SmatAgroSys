@@ -116,6 +116,10 @@ a {text-decoration: none;color: #777676;}
 .text_white {color: #fff;}
 .text_orange {color: #ffa500;}
 
+.inherit {background-color: inherit !important;}
+.overflow {overflow: scroll;}
+.no_wrap {white-space: nowrap;}
+
 .border_gray {border: 1.4px solid var(--gray);transition: border 0.2s ease}
 .border_white {border: 1.4px solid var(--white);transition: border 0.2s ease}
 
