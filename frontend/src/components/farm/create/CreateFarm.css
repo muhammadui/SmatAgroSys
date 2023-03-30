@@ -27,6 +27,10 @@
 }
 .create_farm_section .map img {width: 100%;height: 100%;object-fit: fill;}
 
+
 @media screen and (min-width: 650px) {
     .create_farm_section .form {max-width: 500px;}
+    .create_farm_section .map {
+        height: 400px;
+    }
 }

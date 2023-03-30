@@ -1,5 +1,6 @@
 import * as React from "react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import Loader from "../../../components/loader/Loader";
 import { useForm, SubmitHandler } from "react-hook-form";
@@ -21,16 +22,18 @@ const Login = () => {
     // const [googleLogin, setGoogleLogin] = useState<boolean>(false);
     const [loading, setLoading] = useState<boolean>(false);
     const [loaderMsg, setLoaderMsg] = useState<string>("");
+    const navigate = useNavigate();
 
     const handleLogin: SubmitHandler<LoginProps> = (loginInfo) => {
-        console.log("Login info: ", loginInfo);
+        // console.log("Login info: ", loginInfo);
         setLoading(true);
         setLoaderMsg("Processing login info...");
         
         return setTimeout(() => {
             setLoaderMsg("");
             setLoading(false);
-            toast.success("Feature coming soon...", { pauseOnHover: false, autoClose: 2000});
+            toast.success("Authenticated successfully!", { pauseOnHover: false, autoClose: 2000});
+            return navigate("/dashboard");
         }, 3000);
     }
 

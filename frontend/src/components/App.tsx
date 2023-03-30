@@ -17,7 +17,6 @@ import ViewFarm from "./farm/view/ViewFarm";
 import ViewProcess from "./farm/process/ViewProcess";
 import LiveUpdate from "./live_update/LiveUpdate";
 import Services from "./services/Services";
-import FarmerServices from "./services/farmers/services/FarmerServices";
 
 // Global Style
 import "../index.css";
@@ -47,8 +46,6 @@ const App = () => {
           <Route path="view_process/:processId" element={<ViewProcess />} />
           <Route path="live_update" element={<LiveUpdate />} />
           <Route path="services" element={<Services />} />
-          {/* <Route path="services/farmers" element={<FarmerServices />} />
-          <Route path="services/ex_officers" element={<FarmerServices />} /> */}
         </Route>
 
         <Route path="*" element={<Navigate to="/" />} />

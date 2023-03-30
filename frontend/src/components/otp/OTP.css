@@ -86,6 +86,13 @@
 }
 .otp_btn:hover {background-color: var(--white);color: var(--primary-color);}
 
+/* Disabled */
+.disabled {
+    background-color: gray !important;
+    color: #fff !important;
+    border-color: gray !important;
+}
+
 @media screen and (min-width: 100px) {
     .otp_right .form .verfication_wrapper {grid-template-columns: repeat(1, auto);}
 }
