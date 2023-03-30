@@ -110,7 +110,7 @@ nav.home_nav {
 .banner_section {
     width: 100%;
     min-height: 60vh;
-    margin: 50px 0;
+    margin: 50px 0 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -120,36 +120,33 @@ nav.home_nav {
 .banner_left, .banner_right {
     width: 100%;
     min-height: 60vh;
-    margin-bottom: 50px;
+    /* margin-bottom: 50px; */
 }
 .banner_left {
     padding-right: 20px;
 }
 .banner_left h2 {
-    font-size: 2.8rem;
+    font-size: 1.8rem;
     margin-bottom: 20px;
 }
-.banner_left p {font-size: 1.2rem;line-height: 2rem;}
+.banner_left p {font-size: 1rem;line-height: 2rem;}
+
+.banner_right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
 
 .banner_right .top_image, .banner_right .bottom_image {
-    width: 70%;
-    height: 70%;
+    width: 100%;
+    height: 100%;
     border-radius: 6px;
     overflow: hidden;
 }
 
-.banner_right .top_image {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    z-index: 4;
-}
-.banner_right .bottom_image {
-    position: absolute;
-    left: 10px;
-    bottom: 10px;
-    z-index: 2;
-}
+.banner_right .top_image {margin-bottom: 20px;}
 
 .banner_right .top_image img, .banner_right .bottom_image img {
     width: 100%;
@@ -159,7 +156,7 @@ nav.home_nav {
 
 /* About Section */
 .about_section .cards {
-    margin-top: 30px;
+    margin-top: 40px;
     display: grid;
     grid-template-columns: auto;
     justify-content: space-between;
@@ -472,9 +469,33 @@ nav.home_nav {
 
 @media screen and (min-width: 650px) {
     .home_nav_right .link {display: inline-block !important;}
-    .banner_section {flex-direction: row;}
+    .banner_section {flex-direction: row;margin-bottom: 100px;}
+
+    .banner_left h2 {font-size: 2.8rem;}
+    .banner_left p {font-size: 1.2rem;}
+
     .banner_left, .banner_right {width: 50%;height: 60vh;}
-    .banner_right .top_image, .banner_right .bottom_image {width: 60%;}
+    /* .banner_right .top_image, .banner_right .bottom_image {width: 60%;} */
+
+    .banner_right {margin: 0;}
+    .banner_right .top_image, .banner_right .bottom_image {
+        width: 60%;
+        height: 70%;
+    }
+    
+    .banner_right .top_image {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        margin: 0;
+        z-index: 4;
+    }
+    .banner_right .bottom_image {
+        position: absolute;
+        left: 10px;
+        bottom: 10px;
+        z-index: 2;
+    }
 
     .about_section .cards {grid-template-columns: auto auto;}
     .about_section .cards .card:hover {transform: scale(1.08);}

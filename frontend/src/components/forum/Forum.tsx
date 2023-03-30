@@ -39,9 +39,9 @@ const Forum = () => {
                 {/* Forum Header Section */}
                 <div className="forum_header mt">
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Nesciunt ullam quaerat doloremque vitae, odit temporibus 
-                        consequatur minima.
+                        Our focus is to foster a vibrant community of farmers and agriculture enthusiasts 
+                        who are passionate about improving their skills, solving challenges, and promoting 
+                        sustainable farming practices.
                     </p>
 
                     <div className="flex_between_center reverse">
@@ -72,10 +72,10 @@ const Forum = () => {
 
                         <div className="card_body mt2">
                             <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                Quo numquam voluptas officia, eligendi velit ratione unde 
-                                quasi nobis quidem est, consectetur, nam quisquam asperiores? 
-                                Nobis quibusdam illum assumenda rem quae.
+                                Hello, my maize is having problems with stunted growth, yellowing of leaves, 
+                                and ultimately death of my plant. I was thinking it is because of the  
+                                spread by insects like aphids and thrips, making it difficult for me to 
+                                control, what would be your advice for me to handle it please. Thanks.
                             </p>
 
                             <div className="flex_end_center mt2">
@@ -111,8 +111,7 @@ const Forum = () => {
                                             <div className="com_image">CM</div>
                                             <div className="com_content">
                                                 <p>
-                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                                    Quis ullam corrupti nam nemo facere assumenda eligendi.
+                                                    Apply insecticides to control the aphids and thrips that spread the disease.
                                                 </p>
                                             </div>
                                         </div>
@@ -122,9 +121,8 @@ const Forum = () => {
                                             <div className="com_image">DM</div>
                                             <div className="com_content">
                                                 <p>
-                                                    dolor sit amet consectetur adipisicing elit and {" "}
-                                                    <strong className="text_primary">@CM</strong> {" "}
-                                                    Quis ullam corrupti nam nemo facere.
+                                                    Remove infected plants, Infected plants should be removed and destroyed to prevent 
+                                                    the spread of the disease to healthy plants.
                                                 </p>
                                             </div>
                                         </div>
@@ -166,9 +164,9 @@ const Forum = () => {
 
                         <div className="card_body mt2">
                             <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                Quo numquam voluptas officia, eligendi velit ratione unde 
-                                quasi nobis quidem est, consectetur, nam quisquam asperiores?
+                                I have noticed that my tomato plants are developing brown spots on the leaves 
+                                and the fruits are showing signs of rot. What could be causing this problem and 
+                                what steps can I take to manage it?
                             </p>
 
                             <div className="flex_end_center mt2">
