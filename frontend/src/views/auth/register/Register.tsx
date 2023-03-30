@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Loader from "../../../components/loader/Loader";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { toast } from "react-toastify";
@@ -24,6 +24,7 @@ const Register = () => {
     // const [googleRegister, setGoogleRegister] = useState<boolean>(false);
     const [loading, setLoading] = useState<boolean>(false);
     const [loaderMsg, setLoaderMsg] = useState<string>("");
+    const navigate = useNavigate();
 
     const handleRegister: SubmitHandler<RegisterProps> = (regInfo) => {
         if(!regAs){
@@ -32,14 +33,15 @@ const Register = () => {
             });
         }
         
-        console.log("Register info: ", regInfo);
+        // console.log("Register info: ", regInfo);
         setLoading(true);
-        setLoaderMsg("Processing reg info...");
+        setLoaderMsg("Processing info...");
         
         return setTimeout(() => {
             setLoaderMsg("");
             setLoading(false);
-            toast.success("Feature coming soon...", { pauseOnHover: false, autoClose: 2000});
+            toast.success("Demo for account creation...", { pauseOnHover: false, autoClose: 2000});
+            return navigate("/otp");
         }, 3000);
     }
 

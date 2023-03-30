@@ -1,18 +1,21 @@
 import * as React from "react";
-import { useState, useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import Loader from "../loader/Loader";
 
 // Image
 import image from "../../assets/Image_transp.png";
 // Style
 import "./OTP.css";
+import { toast } from "react-toastify";
 
 const OTP = () => {
     const [code, setCode] = useState({
         digit1: "", digit2: "", digit3: "", 
         digit4: "", digit5: ""
     });
-    const [disableBtn, setDisableBtn] = useState<boolean>(true);
+    const [disableBtn, setDisableBtn] = useState<boolean>(false);
+    const navigate = useNavigate();
 
     useEffect(() => {
 
@@ -22,8 +25,16 @@ const OTP = () => {
     }, []);
 
     const handleKeyUp = (e: any) => {
-        if(Object.values(code).every((val) => val.length > 0)){setDisableBtn(false)}
-        else { setDisableBtn(true)}
+        if(Object.values(code).every((val) => val.length > 0)){
+            setDisableBtn(true);
+            setTimeout(() => {
+                toast.success("Verified!", {autoClose: 2000, pauseOnHover: false});
+            }, 1000);
+            return setTimeout(() => {
+                return navigate("/dashboard");
+            }, 3000);
+        }
+        else { setDisableBtn(false)}
         
 
         if(e.key.toLowerCase() === "backspace"){
@@ -38,6 +49,11 @@ const OTP = () => {
         if(e.target.value && e.target.name !== "digit5"){ 
             return e.target.nextSibling.focus(); 
         }
+
+        // const { digit1, digit2, digit3, digit4, digit5 } = code;
+        // if(digit1 && digit2 && digit3 && digit4 && digit5){
+        //     return console.log("Ready to login...");
+        // }
     }
 
     const handleChange = (e: any) => {
@@ -54,42 +70,48 @@ const OTP = () => {
     }
 
     return (
-        <div className="otp_section">
-            <div className="otp_left">
-                <div className="image"><img src={image} alt="Image" /></div>
+        <>
+            {/* Loader */}
+            {disableBtn ? <Loader message="Processing info..." /> : null}
+
+            <div className="otp_section">
+                <div className="otp_left">
+                    <div className="image"><img src={image} alt="Image" /></div>
+                </div>
+                
+                <div className="otp_right">
+                    <form className="form" onSubmit={handleVerifyCode}>
+                        <p className="text_center mb2">
+                            We have sent you a one time verification code
+                            to your number ending with {"8423"}
+                        </p>
+
+                        <div className="verfication_wrapper">
+                            <input type="number" name="digit1" id="digit1" value={code.digit1} onChange={handleChange} onKeyUp={handleKeyUp} />
+                            <input type="number" name="digit2" id="digit2" value={code.digit2} onChange={handleChange} onKeyUp={handleKeyUp} />
+                            <input type="number" name="digit3" id="digit3" value={code.digit3} onChange={handleChange} onKeyUp={handleKeyUp} />
+                            <input type="number" name="digit4" id="digit4" value={code.digit4} onChange={handleChange} onKeyUp={handleKeyUp} />
+                            <input type="number" name="digit5" id="digit5" value={code.digit5} onChange={handleChange} onKeyUp={handleKeyUp} />
+                        </div>
+
+                        <div className="form_group">
+                            <input type="submit" value="Verify" 
+                                className={`otp_btn ${disableBtn ? 'disabled' : ''}`}
+                                disabled={disableBtn ? true : false}
+                            />
+                        </div>
+
+                        <div className="text_center mt">
+                            <span className="mr">Didn't get a security code?</span>
+                            <Link className="span_btn text_primary mt" to="#">re-send it</Link>
+                        </div>
+
+                    </form>
+                </div>
+
+                <Link className="back_btn" to="/"><span>Cancel</span></Link>
             </div>
-            
-            <div className="otp_right">
-                <form className="form" onSubmit={handleVerifyCode}>
-                    <p className="text_center mb2">
-                        We have sent you a one time verification code
-                        to your number ending with {"8423"}
-                    </p>
-
-                    <div className="verfication_wrapper">
-                        <input type="number" name="digit1" id="digit1" value={code.digit1} onChange={handleChange} onKeyUp={handleKeyUp} />
-                        <input type="number" name="digit2" id="digit2" value={code.digit2} onChange={handleChange} onKeyUp={handleKeyUp} />
-                        <input type="number" name="digit3" id="digit3" value={code.digit3} onChange={handleChange} onKeyUp={handleKeyUp} />
-                        <input type="number" name="digit4" id="digit4" value={code.digit4} onChange={handleChange} onKeyUp={handleKeyUp} />
-                        <input type="number" name="digit5" id="digit5" value={code.digit5} onChange={handleChange} onKeyUp={handleKeyUp} />
-                    </div>
-
-                    <div className="form_group">
-                        <input type="submit" value="Verify" className="otp_btn" 
-                            disabled={disableBtn ? true : false}
-                        />
-                    </div>
-
-                    <div className="text_center mt">
-                        <span className="mr">Didn't get a security code?</span>
-                        <Link className="span_btn text_primary mt" to="#">re-send it</Link>
-                    </div>
-
-                </form>
-            </div>
-
-            <Link className="back_btn" to="/"><span>Cancel</span></Link>
-        </div>
+        </>
     )
 }
 
