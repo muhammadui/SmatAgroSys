@@ -10,7 +10,7 @@ const Footer = () => {
             <hr />
             <p className="mt2">
                 Copyright &copy; {new Date().getFullYear()} {" "}
-                <span className="text_primary">AGROSIS</span> {" "}
+                <span className="text_primary">SmatAgrosys</span> {" "}
                 | All Rights Reserved | <span className="span_btn">Terms and Conditions</span> {" "}
                 | Privacy Policy.
             </p>

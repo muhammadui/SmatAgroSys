@@ -38,7 +38,7 @@ const Navigation = ({ fullWidth, setFullWidth}: NavProps ) => {
                             ) : null
                         }
 
-                        <Link to="/" className={`app_name ${fullWidth ? 'hide' : ''}`}>AGROSYS</Link>
+                        <Link to="/" className={`app_name ${fullWidth ? 'hide' : ''}`}>SmatAgrosys</Link>
                         <button className={`close_full_width ${fullWidth ? 'hide' : ''}`} 
                             onClick={() => setFullWidth(true)}
                         >X</button>
