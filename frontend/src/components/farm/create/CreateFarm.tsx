@@ -54,6 +54,7 @@ const CreateFarm = () => {
                     <div className="form_group">
                         <label htmlFor="country" className="label">Country</label>
                         <select name="country" id="country">
+                            <option value="nigeria">Nigeria</option>
                             {/* {selectedState && <option value="">Country</option>} */}
                         </select>
                     </div>

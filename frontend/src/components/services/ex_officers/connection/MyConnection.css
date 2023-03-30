@@ -1,0 +1,20 @@
+.myconnection_section {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: calc(100vh - 80px);
+    background-color: #fff;
+    color: #000;
+    padding: 0 5%;
+    transform: translateX(-120vw);
+    transition: transform 0.6s ease;
+    z-index: 18;
+}
+.myconnection_section.show {transform: translateX(0);}
+
+.myconnection_section .btn_bg {border-radius: 4px;}
+
+@media screen and (min-width: 650px) {
+    .myconnection_section {padding: 0 20px;}
+}
