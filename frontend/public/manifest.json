@@ -1,0 +1,35 @@
+{
+  "name": "SmartAgrosys",
+  "short_name": "SmartAgrosys",
+  "start_url": "/",
+  "scope": "/",
+  "background_color": "#fff",
+  "description": "SmartAgroSys",
+  "theme_color": "#ffffff",
+  "display": "standalone",
+  "dir": "auto",
+  "orientation": "portrait-primary",
+
+  "icons": [
+    {
+      "src": "icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ],
+  "categories": [
+    "business",
+    "finance",
+    "food",
+    "health",
+    "productivity",
+    "shopping",
+    "utilities"
+  ]
+}
