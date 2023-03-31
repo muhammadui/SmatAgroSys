@@ -1,8 +1,8 @@
-![SmartAgroSIs Banner](app-banner.jpg)
+![SmartAgrosys Banner](app-banner.jpg)
 
-# SmatAgro
+# SmatAgrosys
 
-SmatAgro is a tech-driven solution that empowers local farmers by providing them with tools and insights to increase crop yields, adopt climate-smart practices, and promote sustainable agriculture. The app is designed to run on cross-platforms as a Progressive Web App (PWA), making it accessible and usable even in areas with limited internet connectivity.
+SmatAgrosys is a tech-driven solution that empowers local farmers by providing them with tools and insights to increase crop yields, adopt climate-smart practices, and promote sustainable agriculture. The app is designed to run on cross-platforms as a Progressive Web App (PWA), making it accessible and usable even in areas with limited internet connectivity.
 
 ## Technologies Used
 
@@ -46,7 +46,7 @@ To install the app, you must have Node.js v16+ installed on your computer. Follo
 
 ## PWA Checklist
 
-The SmartAgroSIs app meets the following PWA checklist:
+The SmartAgrosys app meets the following PWA checklist:
 
 - [✓] Web app manifest is present
 - [✓] Web app manifest has a `name`, `short_name`, `icons`, and `start_url`
@@ -75,6 +75,6 @@ To deploy the app, you can use Firebase hosting or Google Cloud Platform (GCP). 
 
 - Muhammad Ibrahim Umar
 - Usman Kamilu Yunusa
-- Farouq Muhammad Umar
+- Faruk Muhammad Umar
 
 ## License
