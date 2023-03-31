@@ -69,7 +69,7 @@ To deploy the app, you can use Firebase hosting or Google Cloud Platform (GCP). 
 ### Development Team
 
 - Muhammad Ibrahim Umar ([muhammadui](https://github.com/muhammadui))
-- Musa Illasu ([illias](https://github.com/musailliasu))
+- Musa Illasu ([MI](https://github.com/musailliasu))
 
 ### Design Team
 
